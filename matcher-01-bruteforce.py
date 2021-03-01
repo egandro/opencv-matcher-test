@@ -21,6 +21,8 @@ orb = cv2.ORB_create()
 kp1, des1 = orb.detectAndCompute(img1,None)
 kp2, des2 = orb.detectAndCompute(img2,None)
 
+print("kp template matches:", len(kp1))
+
 # create BFMatcher object
 bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
 
